@@ -9,14 +9,14 @@
 Pod::Spec.new do |s|
 
   s.name         = "YfMediaPlayer"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "云帆播放器"
 
   s.description  = <<-DESC
   支持大量格式的视频格式，全景播放、双屏播放，快慢速播放，并自动选择最近的cdn来进行拉流等等。
                    DESC
 
-  s.homepage     = "https://github.com/YfCloudKit/YFMediaPlayerKit"
+  s.homepage     = "https://github.com/YfCloudKit/YFMediaPlayerKit-iOS"
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/YfCloudKit/YFMediaPlayerKit.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/YfCloudKit/YFMediaPlayerKit-iOS.git", :tag => s.version.to_s }
   s.vendored_frameworks =  "YfMediaPlayer/*.{framework}"
   s.vendored_libraries = "YfMediaPlayer/Classes/ffmpeg/lib/*.a"
   s.preserve_paths = ["YfMediaPlayer/Classes/ffmpeg/lib/*.a","YfMediaPlayer/Classes/ffmpeg/include/**/*.h"]
