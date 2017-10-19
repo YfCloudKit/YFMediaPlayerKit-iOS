@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YfMediaPlayer"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "云帆播放器"
 
   s.description  = <<-DESC
@@ -26,10 +26,12 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/YfCloudKit/YFMediaPlayerKit-iOS.git", :tag => s.version.to_s }
   s.vendored_frameworks =  "YfMediaPlayer/*.{framework}"
+  s.vendored_libraries = "YfMediaPlayer/Classes/ffmpeg/lib/*.a"
+  s.preserve_paths = ["YfMediaPlayer/Classes/ffmpeg/lib/*.a","YfMediaPlayer/Classes/ffmpeg/include/**/*.h"]
   s.ios.deployment_target = '8.0'
   s.frameworks   = 'VideoToolbox'
   s.libraries = 'z','c++','bz2','avcodec','avfilter','avformat','avutil','swresample','swscale'
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/ffmpeg/include"','LIBRARY_SEARCH_PATHS' => '"$(SRCROOT)/ffmpeg/lib"' }
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/YfMediaPlayer/Classes/ffmpeg/include"','LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/YfMediaPlayer/Classes/ffmpeg/lib"' }
   s.requires_arc = true
 
 end
