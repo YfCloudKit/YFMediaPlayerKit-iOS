@@ -32,3 +32,4 @@ FOUNDATION_EXPORT const unsigned char YfMediaPlayerVersionString[];
 #define YfMoviePlayerFirstAudioFrameRenderedNotification YfMPMoviePlayerFirstAudioFrameRenderedNotification
 #define YfMPMoviePlayerAccurateSeekCompleteNotification YfMPMoviePlayerAccurateSeekCompleteNotification
 
+#define YFPlayerVision @"0.0.2"
