@@ -71,8 +71,6 @@ typedef enum YfLogLevel {
 
 @class YfFFMoviePlayerController;
 
-
-
 @protocol YfFFMoviePlayerControllerDelegate <NSObject>
 
 //回调视频数据
@@ -86,8 +84,6 @@ typedef enum YfLogLevel {
  * 可以开始播放
  */
 - (void)playerStatusCallBackLoadingCanReadyToPlay:(YfFFMoviePlayerController *)player;
-
-
 
 /**
  * 播放器资源加载中；
@@ -114,8 +110,6 @@ typedef enum YfLogLevel {
 
 @end
 
-
-
 @interface YfFFMoviePlayerController : NSObject <YfMediaPlayback>
 
 /*
@@ -126,7 +120,6 @@ typedef enum YfLogLevel {
 */
 - (id)initWithContentURL:(NSURL *)aUrl
              withOptions:(YfFFOptions *)options useDns:(BOOL)availableDNS useSoftDecode:(BOOL)availableDecode DNSIpCallBack:(DNSIpCallBack)DNSIpCallBack appID:(const char *)appid refer:(const char *)refer bufferTime:(float)bufferTime display:(BOOL)display isOpenSoundTouch:(BOOL)soundTouch;
-
 
 
 - (void)prepareToPlay;
