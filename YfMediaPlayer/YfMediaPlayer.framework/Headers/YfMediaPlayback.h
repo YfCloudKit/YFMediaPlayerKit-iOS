@@ -156,6 +156,7 @@ typedef void(^DNSIpCallBack)(NSString *ip);
 
 - (void)displayPoint:(UITouch *)point;
 
+//全景播放、3D播放 设置比例 ZoomScale为缩放比例，如果 >=1, 则放大，如果 <1，缩小
 - (void)setPlayerVideoZoom:(float)ZoomScale;
 
 - (void)startDeviceMotion;
