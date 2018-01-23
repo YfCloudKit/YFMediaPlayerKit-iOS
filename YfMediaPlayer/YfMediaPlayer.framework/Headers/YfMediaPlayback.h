@@ -146,7 +146,10 @@ typedef void(^DNSIpCallBack)(NSString *ip);
 @property (nonatomic) float playbackRate;
 @property (nonatomic) float playbackVolume;
 
+
 - (UIImage *)thumbnailImageAtCurrentTime;
+- (void)createGifdelayTime:(float)delaytime Gifsize:(CGSize)Gifsize;
+- (NSString *)makeGif:(NSString *)fileName;
 
 
 //设置播放全景模式
