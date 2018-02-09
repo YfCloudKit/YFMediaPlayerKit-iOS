@@ -80,7 +80,7 @@ typedef enum YfLogLevel {
 - (void)senderOutAudioData:(NSData*)audioData size:(size_t)audioDataSize player:(YfFFMoviePlayerController *)player;
 
 /**
- * 假如哪有开启自动播放 需要等此回调出来之后 调用play
+ * 假如没有开启自动播放 需要等此回调出来之后 调用play
  * 可以开始播放
  */
 - (void)playerStatusCallBackLoadingCanReadyToPlay:(YfFFMoviePlayerController *)player;

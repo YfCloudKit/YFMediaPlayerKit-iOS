@@ -116,10 +116,10 @@ typedef void(^DNSIpCallBack)(NSString *ip);
 
 
 //进度条时间 重复动作
-- (void)repeat_video:(double)startSec;
+- (void)repeat_video:(double)startSec AndDuration:(double)duration repeatCount:(int)num;
 
 //进度条时间 慢动作
-- (void)slow_video:(double)startSec;
+- (void)slow_video:(double)startSec AndDuration:(double)duration repeatCount:(int)num;
 
 
 
@@ -146,7 +146,7 @@ typedef void(^DNSIpCallBack)(NSString *ip);
 @property (nonatomic) float playbackRate;
 @property (nonatomic) float playbackVolume;
 
-
+//Gif和截图
 - (UIImage *)thumbnailImageAtCurrentTime;
 - (void)createGifdelayTime:(float)delaytime Gifsize:(CGSize)Gifsize;
 - (NSString *)makeGif:(NSString *)fileName;
