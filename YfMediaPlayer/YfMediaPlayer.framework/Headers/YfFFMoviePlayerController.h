@@ -92,7 +92,6 @@ typedef enum YfLogLevel {
 - (void)playerStatusCallBackLoading:(YfFFMoviePlayerController *)player;
 - (void)playerStatusCallBackLoadingSuccess:(YfFFMoviePlayerController *)player;
 
-
 /**
  * 播放缓冲开始；
  * 缓冲结束
@@ -107,6 +106,28 @@ typedef enum YfLogLevel {
 - (void)playerStatusCallBackPlayerPlayEnd:(YfFFMoviePlayerController *)player;
 
 - (void)playerStatusCallBackPlayerPlayErrorType:(YfPLAYER_MEDIA_ERROR)errorType httpErrorCode:(int)httpErrorCode player:(YfFFMoviePlayerController *)player;
+
+/*
+ * 播放暂停
+ * 播放继续
+ */
+- (void)playerStatusCallBackPlayerPause:(YfFFMoviePlayerController *)player;
+- (void)playerStatusCallBackPlayerPlay:(YfFFMoviePlayerController *)player;
+
+/*
+ * 向前seek
+ * 向后seek
+ * seek完成
+ */
+- (void)playerStatusCallBackPlayerForwardSeek:(YfFFMoviePlayerController *)player;
+- (void)playerStatusCallBackPlayerBackwardSeek:(YfFFMoviePlayerController *)player;
+- (void)playerStatusCallBackPlayerSeekComplete:(YfFFMoviePlayerController *)player;
+
+/*
+ *audioSession中断
+ */
+- (void)playerStatusCallBackPlayerInterrupt:(YfFFMoviePlayerController *)player;
+
 
 @end
 
